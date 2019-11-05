@@ -1,0 +1,9 @@
+name: opi_led_lib
+version: 0.1.0
+
+authors:
+  - MrYacha <YachaGorobtsov@gmail.com>
+
+crystal: 0.31.1
+
+license: MIT
