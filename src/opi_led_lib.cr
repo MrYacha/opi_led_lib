@@ -1,13 +1,12 @@
-# TODO: Support many leds colors
 module OpiLedLib
 
-  def self.enable()
-    command = "sudo echo 1 > /sys/class/leds/orangepi\:red\:status/brightness"
+  def self.enable(path = "/sys/class/leds/orangepi\:red\:status/brightness")
+    command = "sudo echo 1 > " + path
     Process.run(command, shell: true)
   end
 
-  def self.disable()
-    command = "sudo echo 0 > /sys/class/leds/orangepi\:red\:status/brightness"
+  def self.disable(path = "/sys/class/leds/orangepi\:red\:status/brightness")
+    command = "sudo echo 0 > " + path
     Process.run(command, shell: true)
   end
 
